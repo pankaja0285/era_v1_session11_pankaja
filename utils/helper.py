@@ -1,3 +1,4 @@
+import os
 import torch
 import matplotlib.pyplot as plt
 from torchsummary import summary
@@ -18,6 +19,10 @@ TOTAL_BAR_LENGTH = 65.
 last_time = time.time()
 begin_time = last_time
 
+
+def create_folder(folder_name):
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name, mode=0o777)
 
 def imshow(img):
     # functions to show an image
@@ -81,15 +86,15 @@ def set_seed(seed,cuda_available):
     
     
 def process_config(file_name):
+    config = None
     with open(file_name, 'r') as config_file:
         try:
             config = yaml.safe_load(config_file)
-            print(" loading Configuration of your experiment ..")
-            return config
+            print("Loading Configuration of your experiment..")
         except ValueError:
             print("INVALID yaml file format.. Please provide a good yaml file")
             exit(-1)
-
+    return config
 
 def progress_bar(current, total, msg=None):
     global last_time, begin_time

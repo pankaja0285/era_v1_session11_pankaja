@@ -1,12 +1,11 @@
 import torchvision
 # from torch_cv_wrapper.dataloader.load_data import *
 import torch
+import torch.nn.functional as F
 import torch.optim as optim
 import matplotlib.pyplot as plt
 from dataloader.load_data import *
 from torch.optim.lr_scheduler import StepLR, OneCycleLR, ReduceLROnPlateau
-# from torch_cv_wrapper.utils import train as trn
-# from torch_cv_wrapper.utils import test as tst
 from utils import train as trn
 from utils import test as tst
 
@@ -55,7 +54,10 @@ class TriggerEngine:
         
         criterion = nn.CrossEntropyLoss() if self.config['criterion'] == 'CrossEntropyLoss' else F.nll_loss()
         opt_func = optim.Adam if self.config['optimizer']['type'] == 'optim.Adam' else optim.SGD
-        lr = self.config['optimizer']['args']['lr']
+        if lrmin is None:
+            lr = self.config['optimizer']['args']['lr']
+        else:
+            lr = lrmin
         
         grad_clip = 0.1
             
@@ -84,7 +86,8 @@ class TriggerEngine:
             
         for epoch in range(1, epochs + 1):
             print(f'Epoch {epoch}:')
-            trn.train(model, self.device, train_loader, optimizer,epoch, train_accuracy, train_losses, l1_factor,scheduler,criterion,lrs,self.writer,grad_clip)
+            trn.train(model, self.device, train_loader, optimizer, epoch, train_accuracy, 
+                      train_losses, l1_factor, scheduler, criterion, lrs, self.writer, grad_clip)
             tst.test(model, self.device, test_loader,test_accuracy,test_losses,criterion)
             
             self.writer.add_scalar('Epoch/Train/train_loss', train_losses[-1], epoch)
@@ -117,8 +120,7 @@ class TriggerEngine:
 
         # Reset graph
         lr_finder.reset()
-        return max_lr
-    
+        return max_lr    
         
     def save_experiment(self, model, experiment_name, path):
         print(f"Saving the model for {experiment_name}")

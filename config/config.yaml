@@ -1,0 +1,44 @@
+model: cifar11Res
+model_params:
+    experiment_name: era_v1_s11_cifar_res
+    model_dir: ./models/
+    model_for: ocl
+    model_name: model_ocl
+    seed: 1
+    dropout: 0.01
+    save_model: Y
+    save_model_dir: ./saved_models/
+    save_pth_filename: resnet18.pth
+data_augmentation:
+    type: CIFAR10AlbumentationS9
+    args:
+        horizontalflip_prob: 0.2
+        rotate_limit: 15
+        shiftscalerotate_prob: 0.25
+        num_holes: 1
+        cutout_prob: 0.5
+        cutout_size: 8
+        cutout_padding: 4
+data_loader:
+    type: Cifar10DataLoader
+    classes: ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+    args:
+        batch_size: 512
+        train_batch_size: 128
+        test_batch_size: 100
+        num_workers: 2
+        pin_memory: true
+criterion: CrossEntropyLoss
+optimizer : 
+    type: optim.SGD
+    args:
+        lr: 0.1
+lr_scheduler: OneCycleLR
+lr_finder:
+    max_epoch: 5
+    lr_epochs: 25
+training_params:
+    epochs: 20
+    l1_factor: 0
+    l2_factor: 0.005
+    

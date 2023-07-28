@@ -1,0 +1,7 @@
+torchsummary
+torch-lr-finder
+hiddenlayer
+seaborn
+torch
+torchvision
+grad-cam
