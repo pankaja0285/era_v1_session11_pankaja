@@ -98,8 +98,7 @@ Analysis:
 </p>
 
 <p>
-    Grad-CAM images:<br/>
-    ![GradCam](gradcam_at_layer4_alb.png)    
+    ![GradCam Image](gradcam_at_layer4_alb.PNG)  
 </p>
 ### Contributing:
 For any questions, bug(even typos) and/or features requests do not hesitate to contact me or open an issue!
