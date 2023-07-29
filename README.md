@@ -96,9 +96,7 @@ Results:
 Analysis:
 - To see how the grad-cam - heat map of the presence of the object
 </p>
+![GradCam Image](gradcam_at_layer4_alb.PNG)
 
-<p>
-    ![GradCam Image](gradcam_at_layer4_alb.PNG)  
-</p>
 ### Contributing:
 For any questions, bug(even typos) and/or features requests do not hesitate to contact me or open an issue!
