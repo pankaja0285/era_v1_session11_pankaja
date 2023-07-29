@@ -59,7 +59,7 @@ About the file structure</br>
 
 **NOTE:** List of libraries required: ***torch*** and ***torchsummary***, ***tqdm*** for progress bar, which are installed using requirements.txt<br/>
 
-One of 2 ways to run any of the notebooks, for instance **S8.ipynb** notebook:<br/>
+One of 2 ways to run any of the notebooks, for instance **Submission_CiFAR_S11_GradCam.ipynb** notebook:<br/>
 1. Using Anaconda prompt - Run as an **administrator** start jupyter notebook from the folder ***era_v1_session11_pankaja*** and run it off of your localhost<br/>
 **NOTE:** Without Admin privileges, the installs will not be correct and further import libraries will fail. <br/>
 ```
