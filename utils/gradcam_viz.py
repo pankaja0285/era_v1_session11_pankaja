@@ -91,7 +91,10 @@ def prepare_image_plot_gradcam(img_loader, inv_norm, load_models={}, model_types
         curr_model = None
         curr_model = load_models[model_type]
         if model_type == "resnet18":
-            save_weights_file = f"{model_type}.pth"
+            if apply_alb_cutout == "Y":
+                save_weights_file = f"{model_type}_alb.pth"
+            else:
+                save_weights_file = f"{model_type}.pth"
             curr_model = load_saved_weights(curr_model, save_path, save_weights_file, model_type=model_type)
             baseline_cam_net = ResNet_CAM(curr_model, layer_k)
             n_rows += 1
