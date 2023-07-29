@@ -67,7 +67,7 @@ jupyter notebook
 ```
 2. Upload the notebook folder ***era_v1_session11_pankaja*** to google colab at [colab.google.com](https://colab.research.google.com/) and run it on colab<br/>
 
-### In Submission_CiFAR_S11_GradCam.ipynb - Use case With RandomCrop ONLY:
+### In <i>Submission_CiFAR_S11_GradCam.ipynb</i> - Use case With RandomCrop ONLY:
 **File used: models/resnet.py**
 **
 <p>
@@ -82,7 +82,7 @@ Analysis:
 - To see how the grad-cam - heat map of the presence of the object
 </p>
 
-### In Submission_CiFAR_S11_GradCam.ipynb - With Cutout applied via Albumentations:
+### In <i>Submission_CiFAR_S11_GradCam.ipynb</i> - With Cutout applied via Albumentations:
 **File used: models/resnet.py**
 **
 <p>
