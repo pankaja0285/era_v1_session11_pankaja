@@ -99,7 +99,7 @@ Analysis:
 
 <p>
     Grad-CAM images:
-    ![gradcam image](https://github.com/pankaja0285/era_v1_session11_pankaja/blob/main/gradcam_at_layer4_alb.png)
+    ![ezcv logo](https://github.com/pankaja0285/era_v1_session11_pankaja/blob/main/gradcam_at_layer4_alb.png)
 </p>
 ### Contributing:
 For any questions, bug(even typos) and/or features requests do not hesitate to contact me or open an issue!
