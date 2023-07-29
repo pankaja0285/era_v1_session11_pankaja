@@ -99,7 +99,7 @@ Analysis:
 
 <p>
     Grad-CAM images:
-    ![Alt grad-cam]([C:\PS\ERA_V1\era_v1_session11_pankaja\gradcam_at_layer4_alb.png](https://github.com/pankaja0285/era_v1_session11_pankaja/blob/main/gradcam_at_layer4_alb.png?raw=true)
+    ![Alt grad-cam]([https://github.com/pankaja0285/era_v1_session11_pankaja/blob/main/gradcam_at_layer4_alb.png?raw=true])
 </p>
 ### Contributing:
 For any questions, bug(even typos) and/or features requests do not hesitate to contact me or open an issue!
