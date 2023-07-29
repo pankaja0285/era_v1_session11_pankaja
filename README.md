@@ -94,7 +94,7 @@ Results:
 - Train accuracy of 84.52 and test accuracy of 88.66 
 
 Analysis:
-- To see how the grad-cam viz in the 4th layer - basically a heat map for the presence of the object
+- To see how the grad-cam visualizes in the 4th layer - basically a heat map for the presence of the object
 </p>
 
 ![GradCam Image](gradcam_at_layer4_alb.png)
