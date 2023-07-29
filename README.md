@@ -98,12 +98,8 @@ Analysis:
 </p>
 
 <p>
-    Grad-CAM images:
-<<<<<<< HEAD
-    ![Gram cam images](gradcam_at_layer4_alb.png)
-=======
-    ![Alt grad-cam]([https://github.com/pankaja0285/era_v1_session11_pankaja/blob/main/gradcam_at_layer4_alb.png])
->>>>>>> 114929e78886e0b938b09fa1b6e4e482b5057376
+    Grad-CAM images:<br/>
+    ![GradCam](gradcam_at_layer4_alb.png)    
 </p>
 ### Contributing:
 For any questions, bug(even typos) and/or features requests do not hesitate to contact me or open an issue!
